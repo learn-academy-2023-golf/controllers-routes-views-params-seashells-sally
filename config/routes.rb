@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/landing' => 'main#landing'
+  get '/sean' => 'main#sean'
+  get '/eric' => 'main#eric'
+  get '/greg' => 'main#greg'
+  get '/cubed/:number' => 'main#cubed'
+  get '/evenly/:number1/:number2' => 'main#evenly'
+  get 'palendrome/:string' => 'main#palendrome'
+  get 'madlib/:noun/:verb/:adjective/:adverb' => 'main#madlib'
+  root to: 'main#landing'
 end
